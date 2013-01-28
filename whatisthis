@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+
+# Variables
+host=$(hostname | sed 's/.local//g')
+User=$(whoami)
+OS="OS X $(sw_vers -productVersion)"
+Shell="$SHELL"
+Disk=`df | head -2 | tail -1 | awk '{print $5}'`
+
+# Catch Phrase
+CATCH="Geronimo!"
+
+clear #remove the command
+
+echo "
+
+                        ###
+                      ####
+                      ###
+             ####### ##  #######            User: $User
+           ######################           Hostname: $host
+          #####################             $OS
+          ####################              Kernel: $(uname)
+          ####################              Shell: $SHELL
+          #####################             Disk: $Disk
+           #####################
+            ####################
+              ################
+               ####     #####
+
+$CATCH"
