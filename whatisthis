@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-
 # Variables
 host=$(hostname | sed 's/.local//g')
 User=$(whoami)
